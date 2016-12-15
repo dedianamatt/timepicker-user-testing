@@ -25,7 +25,9 @@ html{
     font-style: normal;
 }
 
-
+body {
+  margin-left: 3em;
+}
 
 
 
@@ -98,7 +100,7 @@ a{
     $OTHER
 \*------------------------------------*/
 
-strong, 
+strong,
 .bold{ font-weight: bold; }
 
 em{ font-style: italic; }

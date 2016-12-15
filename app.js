@@ -13,6 +13,9 @@ var port = 3000;
 var exphbs = require('express3-handlebars');
 var hbs;
 
+//exphbs.registerPartial('day.partial', '{{day}}');
+//exphbs.registerPartial('timecard.partial','{{timecard}}')
+
 // For gzip compression
 app.use(express.compress());
 
@@ -29,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
 
     // Locate the views
     app.set('views', __dirname + '/dist/views');
-    
+
     // Locate the assets
     app.use(express.static(__dirname + '/dist/assets'));
 
@@ -43,7 +46,7 @@ if (process.env.NODE_ENV === 'production') {
 
     // Locate the views
     app.set('views', __dirname + '/views');
-    
+
     // Locate the assets
     app.use(express.static(__dirname + '/assets'));
 }
@@ -60,6 +63,9 @@ app.set('view engine', 'handlebars');
 app.get('/', function(request, response, next) {
     response.render('index');
 });
+app.get('/test1a', function(request, response, next) {
+    response.render('test1a');
+})
 
 
 /*
