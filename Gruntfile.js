@@ -58,17 +58,17 @@ module.exports = function (grunt) {
         },
 
         // Hint Config
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc'
-            },
-            all: [
-                'Gruntfile.js',
-                'assets/scripts/**/*.js',
-                '!assets/scripts/vendor/*',
-                'test/spec/**/*.js'
-            ]
-        },
+        // jshint: {
+        //     options: {
+        //         jshintrc: '.jshintrc'
+        //     },
+        //     all: [
+        //         'Gruntfile.js',
+        //         'assets/scripts/**/*.js',
+        //         '!assets/scripts/vendor/*',
+        //         'test/spec/**/*.js'
+        //     ]
+        // },
 
         // Sass Config
         sass: {
@@ -108,10 +108,10 @@ module.exports = function (grunt) {
                 path: 'http://localhost:3000',
                 app: 'Google Chrome'
             },
-            editor: {
-                path: './',
-                app: ''
-            },
+            // editor: {
+            //     path: './',
+            //     app: ''
+            // },
         },
 
         // Rev Config
@@ -254,11 +254,11 @@ module.exports = function (grunt) {
     // Register Tasks
     // Workon
     grunt.registerTask('workon', 'Start working on this project.', [
-        'jshint',
+      //  'jshint',
         'sass:dev',
         'express:dev',
-        'open:site',
-        'open:editor',
+        //'open:site',
+        //'open:editor',
         'watch'
     ]);
 
@@ -268,7 +268,7 @@ module.exports = function (grunt) {
         'express:dev',
         'watch'
     ]);
-    
+
 
     // Build
     grunt.registerTask('build', 'Build production ready assets and views.', [

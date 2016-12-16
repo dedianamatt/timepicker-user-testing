@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <h1>Desktop Test 1B</h1>
+
+  <p>
+    Fill out your timesheet based on your work schedule:
+    <ul>
+      <li>8:30am-12:00pm Monday - Wednesday</li>
+      <li>1:00pm-6:15pm Thursday - Friday</li>
+    </ul>
+    Note: You can only select the time with your mouse.
+  </p>
+
+  <div class="row">
+    {{> timecard.partial}}
+  </div>
+</div>
+
+<script>
+$(".time-entry").pickatime({
+  interval: 15,
+  clear: false,
+  klass: {
+    holder: 'picker__holder esg-dropdown',
+    list: 'picker_list esg-dropdown__menu',
+    listItem: 'picker__list-item esg-dropdown__menu-item'
+  }
+}).removeAttr("readonly");
+$(".picker__holder").addClass("esg-dropdown");
+$(".picker__list").addClass("esg-dropdown__menu");
+$(".picker__list-item").addClass("esg-dropdown__menu-item");
+
+</script>

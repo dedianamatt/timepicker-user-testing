@@ -65,6 +65,9 @@ app.get('/', function(request, response, next) {
 });
 app.get('/test1a', function(request, response, next) {
     response.render('test1a');
+});
+app.get('/test1b', function(request, response, next) {
+    response.render("test1b");
 })
 
 
