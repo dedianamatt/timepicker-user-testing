@@ -1234,6 +1234,30 @@ label {
   visibility: hidden;
 }
 
+@media (max-width: 767px) {
+  /* line 714, sass/ui/_scaffolding.scss */
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 719, sass/ui/_scaffolding.scss */
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 724, sass/ui/_scaffolding.scss */
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 729, sass/ui/_scaffolding.scss */
+  .hidden-lg {
+    display: none !important;
+  }
+}
 /*------------------------------------*\
     $GRID
 \*------------------------------------*/

@@ -69,6 +69,18 @@ app.get('/test1a', function(request, response, next) {
 app.get('/test1b', function(request, response, next) {
     response.render("test1b");
 })
+app.get('/test2a', function(request, response, next) {
+    response.render("test2a");
+});
+app.get("/test2b", function(request, response, next) {
+    response.render("test2b");
+})
+app.get('/test3a', function(request, response, next) {
+    response.render("test2a");
+});
+app.get("/test3b", function(request, response, next) {
+    response.render("test2b");
+})
 
 
 /*
