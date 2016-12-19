@@ -76,10 +76,13 @@ app.get("/test2b", function(request, response, next) {
     response.render("test2b");
 })
 app.get('/test3a', function(request, response, next) {
-    response.render("test2a");
+    response.render("test3a");
 });
 app.get("/test3b", function(request, response, next) {
-    response.render("test2b");
+    response.render("test3b");
+});
+app.get("/test3c", function(request, response, next) {
+    response.render("test3c");
 })
 
 

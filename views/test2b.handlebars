@@ -7,7 +7,7 @@
       <li>8:30am-12:00pm Monday - Wednesday</li>
       <li>1:00pm-6:15pm Thursday - Friday</li>
     </ul>
-    Note: You can only select the time with your mouse.
+    Note: You can only enter time with your keyboard
   </p>
 
   <div class="row">
@@ -16,17 +16,22 @@
 </div>
 
 <script>
+//the idea here is that we disable the dropdown, so users HAVE to use a touch keyboard.
 $(".time-entry").pickatime({
   interval: 15,
   clear: false,
+  editable: true,
   klass: {
     holder: 'picker__holder esg-dropdown',
     list: 'picker_list esg-dropdown__menu',
     listItem: 'picker__list-item esg-dropdown__menu-item'
-  }
-}).removeAttr("readonly");
-//$(".picker__holder").addClass("esg-dropdown");
-//$(".picker__list").addClass("esg-dropdown__menu");
-//$(".picker__list-item").addClass("esg-dropdown__menu-item");
+  },
 
+});
+
+//note that only onStart and onRender events are fired when input is "editable"
+//so we need to wire up our on change events
+$('.time-entry').on("change", function(e) {
+  console.log(e.currentTarget.value);
+});
 </script>

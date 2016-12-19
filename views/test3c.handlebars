@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <h1>Desktop Test 1A</h1>
+  <h1>Mobile Test 3c</h1>
 
   <p>
     Fill out your timesheet based on your work schedule:
@@ -7,7 +7,7 @@
       <li>8:30am-12:00pm Monday - Wednesday</li>
       <li>1:00pm-6:15pm Thursday - Friday</li>
     </ul>
-    Note: Choose your preferred method of time entry.
+
   </p>
 
   <div class="row">
@@ -18,14 +18,14 @@
 
 
 <script>
-//the idea here is that the timepicker dropdown displays along with a touch keyboard.
-//what do users do when this happens?
 $(".time-entry").timepicker({
   step: 15,
   scrollDefault: "now",
   forceRoundTime: true,
-  className: "esg-dropdown",
-  orientation: "lb",
+  disableTouchKeyboard: true,
+  useSelect: true,
+  //className: "esg-dropdown",
+  //orientation: "lb",
 });
 $(".time-entry").on("timeFormatError", function(e) {
   $(e.target.offsetParent).addClass("esg-has-error");
