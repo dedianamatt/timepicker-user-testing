@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <h1>Mobile Test 3a</h1>
+
+  <p>
+    Fill out your timesheet based on your work schedule:
+    <ul>
+      <li>8:30am-12:00pm Monday - Wednesday</li>
+      <li>1:00pm-6:15pm Thursday - Friday</li>
+    </ul>
+  </p>
+
+  <div class="row">
+    {{> timecard.partial}}
+  </div>
+</div>
+
+
+
+<script>
+$(".time-entry").timepicker({
+  step: 15,
+  scrollDefault: "now",
+  forceRoundTime: true,
+  disableTouchKeyboard: true,
+  className: "esg-dropdown",
+  orientation: "lb",
+});
+$(".time-entry").on("timeFormatError", function(e) {
+  $(e.target.offsetParent).addClass("esg-has-error");
+});
+$(".time-entry").on("changeTime", function(e) {
+  $(e.target.offsetParent).removeClass("esg-has-error");
+});
+</script>
