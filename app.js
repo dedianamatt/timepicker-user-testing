@@ -10,7 +10,7 @@ var port = 3000;
 /*
  * Use Handlebars for templating
  */
-var exphbs = require('express3-handlebars');
+var exphbs = require('express-handlebars');
 var hbs;
 
 //exphbs.registerPartial('day.partial', '{{day}}');
@@ -18,6 +18,7 @@ var hbs;
 
 // For gzip compression
 app.use(express.compress());
+
 
 /*
  * Config for Production and Development
