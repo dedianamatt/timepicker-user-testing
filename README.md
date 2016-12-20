@@ -7,7 +7,7 @@ Category 3 compares three kinds of 'pickers' on touch devices.
 
 Category 1 tests are meant to be executed on devices with an external keyboard, while categories 2 and 3 are meant to be executed on touch devices.
 
-In development.
+<a href="https://timepicker-user-testing.herokuapp.com/" target="_blank">View test site here</a>
 
 Project was initialized using yeoman node-express generator.
 

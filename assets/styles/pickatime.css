@@ -3,6 +3,7 @@
   position: static;
 }
 
-/*.esg-dropdown__menu-item {
-  padding: .75em 1.25em
-}*/
+input.time-entry {
+  padding-left: .25rem;
+  padding-right:.25rem;
+}
