@@ -24,8 +24,6 @@ $(".time-entry").timepicker({
   forceRoundTime: true,
   disableTouchKeyboard: true,
   useSelect: true,
-  //className: "esg-dropdown",
-  //orientation: "lb",
 });
 $(".time-entry").on("timeFormatError", function(e) {
   $(e.target.offsetParent).addClass("esg-has-error");
