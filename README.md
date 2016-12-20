@@ -95,3 +95,7 @@ Open the project
 ```
 heroku open
 ```
+
+##TODO
+
+Picker on B tests doesn't close.
