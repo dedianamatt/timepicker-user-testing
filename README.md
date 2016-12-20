@@ -1,8 +1,15 @@
 ## Introduction
 
+This project facilitates user testing of preferences for entering and/or selecting time in order to fill out timecards. There are three categories of tests:
+Category 1 identifies how keyboard input affects usability on desktop devices.
+Category 2 identifies how keyboard input affects usability on touch devices.
+Category 3 compares three kinds of 'pickers' on touch devices.
+
+Category 1 tests are meant to be executed on devices with an external keyboard, while categories 2 and 3 are meant to be executed on touch devices.
+
 In development.
 
-Project was initialized using yeoman node-express generator. 
+Project was initialized using yeoman node-express generator.
 
 ### Getting Started
 Here is a post on <a href="http://www.lukelarsen.com/post/02-installing-node" target="_blank">installing Node</a> if you need it.
@@ -14,7 +21,7 @@ Once Node is installed you'll have access to npm so you can use this to install 
 $ npm install -g yo grunt-cli
 ```
 
-The -g means that you are installing globally. 
+The -g means that you are installing globally.
 
 You'll also need to install <a href="http://rubyinstaller.org/" target="_blank">Ruby</a> and <a href="http://sass-lang.com/install" target="_blank">Sass</a>.
 Note that Symantec will probably quarantine the Ruby installer because it doesn't have 'enough' downloads. You can override the quarantine.
