@@ -82,9 +82,6 @@ app.get('/test3a', function(request, response, next) {
 app.get("/test3b", function(request, response, next) {
     response.render("test3b");
 });
-app.get("/test3c", function(request, response, next) {
-    response.render("test3c");
-})
 
 
 /*

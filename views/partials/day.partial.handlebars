@@ -4,8 +4,12 @@
 
     <label>
       Start
-      <input class="time-entry esg-form__input" type="text" />
+      {{#if breakdownTime}}
+        {{> time.breakdown.input.partial }}
 
+      {{else}}
+        <input class="time-entry esg-form__input" type="text" />
+      {{/if}}
     </label>
 
   </div>
@@ -14,8 +18,12 @@
 
     <label>
       End
-      <input class="time-entry esg-form__input" type="text" />
+      {{#if breakdownTime}}
+        {{> time.breakdown.input.partial }}
 
+      {{else}}
+        <input class="time-entry esg-form__input" type="text" />
+      {{/if}}
     </label>
 
   </div>
