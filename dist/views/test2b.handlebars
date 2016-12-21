@@ -1,38 +1,37 @@
 <div class="container-fluid">
-  <h1>Desktop Test 2B</h1>
+  <h1>Mobile Test 2B</h1>
 
   <p>
-    Fill out your timesheet based on your work schedule:
+    Fill out your timesheet based on your work schedule. Your manager requires you to be specific up to the minute:
     <ul>
-      <li>8:30am-12:00pm Monday - Wednesday</li>
-      <li>1:00pm-6:15pm Thursday - Friday</li>
+      <li>2:59pm - 8:31pm Saturday</li>
+      <li>2:50pm - 8:45pm Sunday</li>
     </ul>
-    Note: You can only enter time with your keyboard
+    Note: Set time using the selection inputs
   </p>
 
   <div class="row">
-    {{> timecard.partial}}
+    {{> timecard.partial breakdownTime=true}}
   </div>
 </div>
 
+
+
 <script>
-//the idea here is that we disable the dropdown, so users HAVE to use a touch keyboard.
-$(".time-entry").pickatime({
-  interval: 15,
-  clear: false,
-  editable: true,
-  klass: {
-    holder: 'picker__holder esg-dropdown',
-    list: 'picker_list esg-dropdown__menu',
-    listItem: 'picker__list-item esg-dropdown__menu-item'
-  },
-
-
+//the idea here is that the timepicker dropdown displays along with a touch keyboard.
+//what do users do when this happens?
+$(".time-entry").timepicker({
+  step: 1,
+  scrollDefault: "now",
+  forceRoundTime: true,
+  showOn: null,
+  className: "esg-dropdown",
+  orientation: "lb",
 });
-
-//note that only onStart and onRender events are fired when input is "editable"
-//so we need to wire up our on change events
-$('.time-entry').on("change", function(e) {
-  console.log(e.currentTarget.value);
+$(".time-entry").on("timeFormatError", function(e) {
+  $(e.target.offsetParent).addClass("esg-has-error");
+});
+$(".time-entry").on("changeTime", function(e) {
+  $(e.target.offsetParent).removeClass("esg-has-error");
 });
 </script>
